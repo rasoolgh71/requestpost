@@ -123,8 +123,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-CELERY_BROKER_URL = 'amqp://'
+#CELERY_BROKER_URL = 'amqp://localhost'
+BROKER_URL = "amqp://guest:guset@localhost:5672//"
 CELERY_RESULT_BACKEND ='db+postgresql://admin_ui:123456@localhost:5432/test_ui'
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     '/var/www/static/',

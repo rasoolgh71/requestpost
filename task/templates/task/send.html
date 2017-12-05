@@ -7,10 +7,11 @@
     <title>Title</title>
 </head>
 <body>
-<form>
+<form method="post">
+    {%csrf_token%}
     please enter number between 50-500:
     <br>
-    <input type="text" name="number">
+    <input type="number" name="num">
     <br>
     <input type="submit" value="send">
 </form>

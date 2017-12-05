@@ -4,6 +4,7 @@ from . import views
 urlpatterns = [
     # url(r'index$', views.IndexView.as_view(), name='index'),
     url(r'send$', views.send, name='send'),
+    url(r'show$', views.show, name='show'),
     url(r'home$', views.home, name='home'),
 
 ]
