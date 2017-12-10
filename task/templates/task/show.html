@@ -5,20 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-<a href="send">page send</a>
+<a href="/send">page send</a>
 <h1>show</h1>
 <h3>count message:{{num}}</h3>
 
 <table border="2">
     <th>message</th>
-    {%for i in list%}
+   {% for i in latest_list %}
     <tr>
         <td>{{i}}</td>
     </tr>
 
     {%endfor%}
 </table>
-
-
 </body>
 </html>

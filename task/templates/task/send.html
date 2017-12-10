@@ -8,12 +8,12 @@
 </head>
 <body>
 <form method="post">
-    {%csrf_token%}
-    please enter number between 50-500:
-    <br>
-    <input type="number" name="num">
-    <br>
-    <input type="submit" value="send">
+    {% csrf_token %}
+    <table>
+      {{ form }}
+    </table>
+    <button type="submit">Submit</button>
+  </form>
 </form>
 
 </body>
