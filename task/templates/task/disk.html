@@ -7,11 +7,19 @@
 <body>
 <a href="home">home</a>
 <h1>disk</h1>
+{{out}}
+<br>
 {{disk}}
 <table border="2">
-    <th>filename</th>
-    <th>modify date</th>
     <th>Volume</th>
+    <th>modify date</th>
+    <th>name</th>
+    {%for i in disk%}
+    <tr>
+       <td>{{i}}</td>
+
+    </tr>
+    {%endfor%}
 </table>
 
 

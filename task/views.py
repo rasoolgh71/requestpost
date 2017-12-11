@@ -35,6 +35,9 @@ class GenerateRandomMessageView(FormView):   # craete work celry and random mess
         return redirect('show')
 
 def is_disk(request):    # show volumn-name- modify date directory
-    disk = subprocess.Popen(["ls", "-l"],stdout=subprocess.PIPE, shell=True)
-    disk = disk.communicate()
+    #disk = subprocess.Popen(["ls", "-l"],stdout=subprocess.PIPE, shell=True)
+   # disk = disk.communicate()
+    process = subprocess.Popen(["ls -l  |  awk  '{ print $5,$6,$7,$8, $9 }'"], cwd='/home/parspooyesh-kashan/test-1',
+                              stdin=subprocess.PIPE, stdout=subprocess.PIPE,shell=True)
+    disk = process.communicate()
     return render(request,'task/disk.html',context={'disk':disk})
